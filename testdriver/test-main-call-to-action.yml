@@ -1,0 +1,16 @@
+version: 4.1.30
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click on the main call to action button labeled "СТАТЬ АГЕНТОМ".
+    commands:
+      - command: hover-text
+        text: СТАТЬ АГЕНТОМ
+        description: main call to action button labeled "СТАТЬ АГЕНТОМ"
+        action: click
+  - prompt: >-
+      Assert that the intended page or modal opens.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the login page is displayed with "Личный кабинет"
